@@ -1,3 +1,9 @@
+// The following code is ONLY a basic setup point
+// i.e. it doesn't contain a working game, but 
+// only acts as a debug script for initial stages
+// might be useless later
+
+
 var Board;
 const Player_1 = 'O';
 const Player_2 = 'X';
