@@ -1,6 +1,15 @@
 function startGame() {
-  document.turn = "X";
 
+  for (var i = 1; i <= 9; i = i + 1) {
+    clearCell(i);
+  }
+
+  document.turn = "X";
+			if (Math.random() < 0.5) {
+				document.turn = "O";
+			}
+
+  document.winner = null;
   setMessage(document.turn + " gets to start.");
 }
 
@@ -9,14 +18,21 @@ function setMessage(msg) {
 }
 
 function nextMove(square) {
-  square.innerText = document.turn;
-  switchTurn();
+  if(document.winner != null){
+    setMessage(document.winner + "already won the game.");
+  }else if(square.innerText == ""){
+    square.innerText = document.turn;
+    switchTurn();
+  }else{
+    setMessage("That square is already used.");
+  }
 }
 
 function switchTurn() {
 		
   if (checkForWinner(document.turn)) {
     setMessage("Congratulations, " + document.turn + "!  You win!");
+    document.winner = document.turn;
   } else if (document.turn == "X") {
     document.turn = "O";
     setMessage("It's " + document.turn + "'s turn!");
@@ -26,17 +42,12 @@ function switchTurn() {
   }
 }
 
-function nextMove(square) {
-  if (square.innerText == "") {
-    square.innerText = document.turn;
-    switchTurn();
-  } else {
-    setMessage("That square is already used.");
-  }
-}
-
 function getCell(number){
   return document.getElementById("s" + number).innerText;
+}
+
+function clearCell(number){
+  document.getElementById("s" + number).innerText = "";
 }
 
 function checkRow(a, b, c, move) {
