@@ -1,8 +1,8 @@
 # TicTac
+/////////////////////////////  UNDER CONSTRUCTION  /////////////////////////////
+
 Player versus Player Tic-Tac-Toe
-///////////////////////////// 
-UNDER CONSTRUCTION
-/////////////////////////////
+
 The application has 3 main components: 
 
 1. A html file that provides the basic skeleton for the application.
