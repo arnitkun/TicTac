@@ -43,8 +43,16 @@ function checkRow(a, b, c, move) {
   var result = false;
   if (getCell(a) == move && getCell(b) == move && getCell(c) == move) {
     result = true;
+    makeGreen(a,b,c)
   }
+
   return result;
+}
+
+function makeGreen(a, b, c) {
+  document.getElementById("s" + a).style.backgroundColor = "green";
+  document.getElementById("s" + b).style.backgroundColor = "green";
+  document.getElementById("s" + c).style.backgroundColor = "green";
 }
 
 function checkForWinner(move) {
