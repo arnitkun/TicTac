@@ -22,3 +22,12 @@ function switchTurn() {
 
   setMessage("It's " + document.turn + "'s turn!");
 }
+
+function nextMove(square) {
+  if (square.innerText == "") {
+    square.innerText = document.turn;
+    switchTurn();
+  } else {
+    setMessage("That square is already used.");
+  }
+}
