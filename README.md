@@ -1,10 +1,8 @@
-# TicTac
+# TicTac : Player versus Player Tic-Tac-Toe
 
 To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 /////////////////////////////  UNDER CONSTRUCTION  /////////////////////////////
-
-Player versus Player Tic-Tac-Toe
 
 The application has 3 main components: 
 
