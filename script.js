@@ -1,18 +1,33 @@
 var tries;
+var currentPlayer = "";
 
 function startGame() {
+  
+  var player_x = prompt("enter name for player 1", "player_1");
+  if (player_x === ""){
+    player_x = "player_1"; //add alert on not entering a name
+  }
+
+  var player_o = prompt("enter name for player 2", "player_2");
+  if (player_o === ""){
+    player_o = "player_2"; //add alert on not entering a name
+  }
+
   tries = 0;
+
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
   }
 
   document.turn = "X";
+  currentPlayer = player_x;
 			if (Math.random() < 0.5) {
-				document.turn = "O";
+        document.turn = "O";
+        currentPlayer = player_o;
 			}
 
   document.winner = null;
-  setMessage(document.turn + " gets to start.");
+  setMessage(currentPlayer + " gets to start.");
 }
 
 function setMessage(msg) {
