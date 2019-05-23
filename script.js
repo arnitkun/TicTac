@@ -1,5 +1,7 @@
-function startGame() {
+var tries;
 
+function startGame() {
+  tries = 0;
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
   }
@@ -20,12 +22,22 @@ function setMessage(msg) {
 function nextMove(square) {
   if(document.winner != null){
     setMessage(document.winner + "already won the game.");
+  }else if(checkDraw(tries)){
+    setMessage("The game is a draw");
   }else if(square.innerText == ""){
     square.innerText = document.turn;
+    tries += 1;
     switchTurn();
-  }else{
+  }else {
     setMessage("That square is already used.");
   }
+}
+
+function checkDraw(move_performed){
+  if(move_performed > 7){
+    return true;
+  }
+  return false;
 }
 
 function switchTurn() {
