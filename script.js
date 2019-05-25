@@ -45,7 +45,6 @@ function startGame() {
   showScore(player_1 + " won :" + p1_win + "  " + player_2 +" won " + p2_win);
 }
 
-
 function setMessage(msg) {
   document.getElementById("message").innerText = msg;
 }
@@ -54,14 +53,13 @@ function showScore(score){        //setting up score on the page
   document.getElementById("score").innerText = score;
 }
 
-
-
 function nextMove(square) {
   if(document.winner != null){
     setMessage(findCurrentPlayer(document.winner) + " already won the game.");
   }else if(checkDraw(tries)){
     setMessage("The game is a draw");
     n_draw += 1; 
+    
   }else if(square.innerText == ""){
     square.innerText = document.turn;
     tries += 1;
@@ -83,8 +81,8 @@ function switchTurn() {
     document.winner = document.turn;
   } else if (document.turn == "X") {
     document.turn = "O";
-    setMessage("It's " + player_2 + "'s turn!");
-  } else {
+    setMessage("It's " + findCurrentPlayer(document.turn) + "'s turn!");
+  } else if(document.turn == "O"){
     document.turn = "X";
     setMessage("It's " + findCurrentPlayer(document.turn) + "'s turn!");
   }
@@ -104,9 +102,9 @@ function checkRow(a, b, c, move) {
     result = true;
     makeGreen(a,b,c)
     setMessage("Congratulations, " +  findCurrentPlayer(document.turn) + " you win!");
-    if( findCurrentPlayer(document.turn) == "player_1"){
+    if( findCurrentPlayer(document.turn) == player_1){
       p1_win += 1;
-    }else if( findCurrentPlayer(document.turn) == "player_2"){
+    }else if( findCurrentPlayer(document.turn) == player_2){
       p2_win += 1;
     }
   }
@@ -137,9 +135,10 @@ function checkForWinner(move) {
 }
 
 function findCurrentPlayer(name){
-  if(name === "O"){
+  if(name == "O"){
     currentPlayer =  player_2;
-  }else {
+  }
+  if(name == "X"){
     currentPlayer =  player_1;
   } 
   return currentPlayer;
