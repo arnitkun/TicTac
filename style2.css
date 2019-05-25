@@ -1,3 +1,10 @@
+div.a{
+	text-align: center;
+}
+
+div.b{
+	text-align:center;
+}
 .button1{
 		background-color: rgb(7, 154, 199); /* cyan */
 		border: none;
