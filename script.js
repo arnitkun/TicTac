@@ -35,8 +35,8 @@ function startGame() {
     document.getElementById("s8").style.backgroundColor = "white";
     document.getElementById("s9").style.backgroundColor = "white";
 
-  document.turn = "X";                  // setting the first chance to be of random probability of 0.5 for each player
-  currentPlayer = player_1;             // change this to maybe user selection of x or o??
+  document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
+  currentPlayer = player_1;                    // change this to maybe user selection of x or o??
 			if (Math.random() < 0.5) {
         document.turn = "O";
         currentPlayer = player_2;
@@ -51,8 +51,16 @@ function setMessage(msg) {
 }
 
 function showScore(score){                            //setting up score on the page
-  document.getElementById("score").innerText = score;
+document.getElementById("P1_score").innerText = (player_1 +"'s wins: "+ p1_win);
+document.getElementById("P2_score").innerText = (player_2 +"'s wins: "+ p2_win);
+document.getElementById("draws").innerText = (n_draw + " games drawn ");
 }
+
+
+   // <div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
+	//	<div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
+	//	<div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
+
 
 function nextMove(square) { 
    if(document.winner != null){
