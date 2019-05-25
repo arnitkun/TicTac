@@ -1,11 +1,10 @@
-![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac.PNG)
+![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac.PNG)<br />
 
 
 # TicTac : Player versus Player Tic-Tac-Toe
 
 To See a demo of the app go to : https://ticotac.herokuapp.com/
 
-/////////////////////////////  UNDER CONSTRUCTION  /////////////////////////////
 
 Installation :
 
