@@ -40,13 +40,13 @@ function playAgain(){
 function startGame() {
   p1_win = 0;
   p2_win = 0;
-  player_1 = prompt("enter name for player 1", "player_1");
-  if (player_1 === ""){
+    player_1 = prompt("enter name for player 1", "player_1");
+  if (player_1 === "" || player_1 === null){
     player_1 = "player_1"; //add alert on not entering a name
   }
 
   player_2 = prompt("enter name for player 2", "player_2");
-  if (player_2 === ""){
+  if (player_2 === "" || player_2 === null ){
     player_2 = "player_2"; //add alert on not entering a name
   }
 
