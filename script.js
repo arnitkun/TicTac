@@ -7,8 +7,39 @@ var n_draw = 0;
 var player_1 = "";
 var player_2 = "";
 
+function playAgain(){
+  tries = 0;
+
+  for (var i = 1; i <= 9; i = i + 1) {
+    clearCell(i);
+  }
+
+    document.getElementById("s1").style.backgroundColor = "white";
+    document.getElementById("s2").style.backgroundColor = "white";
+    document.getElementById("s3").style.backgroundColor = "white";
+    document.getElementById("s4").style.backgroundColor = "white";
+    document.getElementById("s5").style.backgroundColor = "white";
+    document.getElementById("s6").style.backgroundColor = "white";
+    document.getElementById("s7").style.backgroundColor = "white";
+    document.getElementById("s8").style.backgroundColor = "white";
+    document.getElementById("s9").style.backgroundColor = "white";
+
+  document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
+  currentPlayer = player_1;                    // change this to maybe user selection of x or o??
+			if (Math.random() < 0.5) {
+        document.turn = "O";
+        currentPlayer = player_2;
+      }
+  document.winner = null;
+  setMessage(currentPlayer + " gets to start. \n He/She gets to play :" + document.turn);
+  showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
+
+}
+
+
 function startGame() {
-  
+  p1_win = 0;
+  p2_win = 0;
   player_1 = prompt("enter name for player 1", "player_1");
   if (player_1 === ""){
     player_1 = "player_1"; //add alert on not entering a name
@@ -56,12 +87,6 @@ document.getElementById("P2_score").innerText = (player_2 +"'s wins: "+ p2_win);
 document.getElementById("draws").innerText = (n_draw + " games drawn ");
 }
 
-
-   // <div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
-	//	<div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
-	//	<div id="score" style = "position: absolute; left: 10px; top: 500px">score here</div>
-
-
 function nextMove(square) { 
    if(document.winner != null){
     setMessage(findCurrentPlayer(document.winner) + " already won the game.");
@@ -80,6 +105,7 @@ function switchTurn() {
     document.winner = document.turn;
   } else if( tries == 9){ 
     setMessage("The game is a tie.");
+    n_draw += 1;
   }else if (document.turn == "X") {
     document.turn = "O";
     setMessage("It's " + player_2 + "'s turn!");
@@ -102,13 +128,15 @@ function checkRow(a, b, c, move) {
   if (getCell(a) == move && getCell(b) == move && getCell(c) == move) {
     result = true;
     makeGreen(a,b,c)
-    setMessage("Congratulations, " +  findCurrentPlayer(document.turn) + " you win!");
+    
+    showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
     if( findCurrentPlayer(document.turn) == player_1){
       p1_win += 1;
     }else if( findCurrentPlayer(document.turn) == player_2){
       p2_win += 1;
     }
   }
+  setMessage("Congratulations, " +  findCurrentPlayer(document.turn) + " you win!");
   return result;
 }
 
