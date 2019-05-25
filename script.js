@@ -40,10 +40,10 @@ function startGame() {
 			if (Math.random() < 0.5) {
         document.turn = "O";
         currentPlayer = player_2;
-			}
+      }
   document.winner = null;
   setMessage(currentPlayer + " gets to start. He/She gets to play :" + document.turn);
-  showScore(player_1 + " won :" + p1_win + "  " + player_2 +" won " + p2_win);
+  showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
 }
 
 function setMessage(msg) {
@@ -54,33 +54,32 @@ function showScore(score){        //setting up score on the page
   document.getElementById("score").innerText = score;
 }
 
-function nextMove(square) {
-  if(document.winner != null){
+function nextMove(square) { 
+   if(document.winner != null){
     setMessage(findCurrentPlayer(document.winner) + " already won the game.");
-  }else if(checkDraw(tries)){
-    setMessage("The game is a draw");
-    n_draw += 1; 
-
   }else if(square.innerText == ""){
     square.innerText = document.turn;
     tries += 1;
     switchTurn();
-  }else {
+  }else{
     setMessage("That square is already used.");
   }
 }
 
 function checkDraw(move_performed){       // some logic check needed
-  if(move_performed > 8 ) {
+  if(move_performed > 8){
     return true;
   }
   return false;
 }
 
 function switchTurn() {
+  
   if (checkForWinner(document.turn)) {
     document.winner = document.turn;
-  } else if (document.turn == "X") {
+  } else if( tries == 9){ 
+    setMessage("The game is a tie.");
+  }else if (document.turn == "X") {
     document.turn = "O";
     setMessage("It's " + findCurrentPlayer(document.turn) + "'s turn!");
   } else if(document.turn == "O"){
@@ -109,7 +108,6 @@ function checkRow(a, b, c, move) {
       p2_win += 1;
     }
   }
-
   return result;
 }
 
@@ -138,9 +136,8 @@ function checkForWinner(move) {
 function findCurrentPlayer(name){
   if(name == "O"){
     currentPlayer =  player_2;
-  }
-  if(name == "X"){
+  }else{
     currentPlayer =  player_1;
-  } 
+  }
   return currentPlayer;
 }
