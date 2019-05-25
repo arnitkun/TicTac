@@ -18,5 +18,6 @@ Gameplay :
    text names the respective players "player_1" or "player_2" repectively.
 2. The first player to enter his/her name is "X" while the second player is "O".
 3. The first probability of a player getting to move first is randomized.
-3. A reset button exists to restart the game when one game ends.
-
+3. A reset button exists to restart the game when one game ends with someone winning or a draw.
+4. Once a player wins, his/her score is increased by one and the winning combination lights up in green on the board.
+5. The game will tell if a match is draw, but to play again the reset button should be used.
