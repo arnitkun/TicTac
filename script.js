@@ -23,6 +23,8 @@ function startGame() {
 
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
+  }
+
     document.getElementById("s1").style.backgroundColor = "white";
     document.getElementById("s2").style.backgroundColor = "white";
     document.getElementById("s3").style.backgroundColor = "white";
@@ -32,7 +34,6 @@ function startGame() {
     document.getElementById("s7").style.backgroundColor = "white";
     document.getElementById("s8").style.backgroundColor = "white";
     document.getElementById("s9").style.backgroundColor = "white";
-  }
 
   document.turn = "X";                  // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;             // change this to maybe user selection of x or o??
@@ -59,7 +60,7 @@ function nextMove(square) {
   }else if(checkDraw(tries)){
     setMessage("The game is a draw");
     n_draw += 1; 
-    
+
   }else if(square.innerText == ""){
     square.innerText = document.turn;
     tries += 1;
