@@ -3,7 +3,7 @@ var currentPlayer = "";
 var p1_win = 0;
 var p2_win = 0;
 var n_draw = 0;
-var name = "";
+
 var player_1 = "";
 var player_2 = "";
 
@@ -14,7 +14,7 @@ function startGame() {
     player_1 = "player_1"; //add alert on not entering a name
   }
 
-  var player_2 = prompt("enter name for player 2", "player_2");
+  player_2 = prompt("enter name for player 2", "player_2");
   if (player_2 === ""){
     player_2 = "player_2"; //add alert on not entering a name
   }
@@ -50,7 +50,7 @@ function setMessage(msg) {
   document.getElementById("message").innerText = msg;
 }
 
-function showScore(score){        //setting up score on the page
+function showScore(score){                            //setting up score on the page
   document.getElementById("score").innerText = score;
 }
 
@@ -66,13 +66,6 @@ function nextMove(square) {
   }
 }
 
-function checkDraw(move_performed){       // some logic check needed
-  if(move_performed > 8){
-    return true;
-  }
-  return false;
-}
-
 function switchTurn() {
   
   if (checkForWinner(document.turn)) {
@@ -81,10 +74,10 @@ function switchTurn() {
     setMessage("The game is a tie.");
   }else if (document.turn == "X") {
     document.turn = "O";
-    setMessage("It's " + findCurrentPlayer(document.turn) + "'s turn!");
+    setMessage("It's " + player_2 + "'s turn!");
   } else if(document.turn == "O"){
     document.turn = "X";
-    setMessage("It's " + findCurrentPlayer(document.turn) + "'s turn!");
+    setMessage("It's " + player_1 + "'s turn!");
   }
 }
 
