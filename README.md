@@ -16,3 +16,4 @@ Gameplay :
 1. The game starts with a random probability of getting either "X" or "O".
 2. The application tells which symbol's turn it is.
 3. Once someone wins, the winning combination lights up in green.
+![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac.PNG)
