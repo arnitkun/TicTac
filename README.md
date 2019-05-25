@@ -1,4 +1,4 @@
-![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac.PNG)<br />
+![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac1.PNG)<br />
 
 
 # TicTac : Player versus Player Tic-Tac-Toe
