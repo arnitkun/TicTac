@@ -128,8 +128,6 @@ function checkRow(a, b, c, move) {
   if (getCell(a) == move && getCell(b) == move && getCell(c) == move) {
     result = true;
     makeGreen(a,b,c)
-    
-    showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
     if( findCurrentPlayer(document.turn) == player_1){
       p1_win += 1;
     }else if( findCurrentPlayer(document.turn) == player_2){
@@ -137,6 +135,7 @@ function checkRow(a, b, c, move) {
     }
   }
   setMessage("Congratulations, " +  findCurrentPlayer(document.turn) + " you win!");
+  showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
   return result;
 }
 
