@@ -13,7 +13,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 ## Table of Contents
 
 1. [How to install the game](#how-to-install-the-game)
-2. [Gameplay instructions](#gameplay-insturctions)
+2. [Gameplay instructions](#Gameplay-insturctions)
 
 
 ## How to install the game:
