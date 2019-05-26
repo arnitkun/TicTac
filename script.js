@@ -1,3 +1,5 @@
+// Script for local gameplay
+
 var moves;                      // number of total moves made by both players in the game
 var currentPlayer = "";         
 var p1_win = 0;                 // the number of wins for player 1
@@ -66,6 +68,48 @@ function startGame() {                                        // This function i
   document.winner = null;                     // current winner set to NULL
   setMessage(currentPlayer + " gets to start. He/She gets to play :" + document.turn);
   showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
+}
+
+function resetGame(){                                                   // Resets the game; The names are requested again, the scores are
+  if(confirm("This will reset the scores to 0! Reset?")){               // reset to 0basically this function acts as the "refresh" for the
+  p1_win = 0;                                                           // game.
+  p2_win = 0;
+    player_1 = prompt("enter name for player 1", "player_1");
+  if (player_1 === "" || player_1 === null){
+    player_1 = "player_1"; 
+  }
+
+  player_2 = prompt("enter name for player 2", "player_2");
+  if (player_2 === "" || player_2 === null ){
+    player_2 = "player_2"; 
+  }
+
+  moves = 0;                                                           // setting moves to 0 in case of a new game   
+
+  for (var i = 1; i <= 9; i = i + 1) {                                 // removing symbols from boards from last game.
+    clearCell(i);
+  }
+
+    document.getElementById("s1").style.backgroundColor = "white";      // Makes the color of all the squares as white.
+    document.getElementById("s2").style.backgroundColor = "white";      // removing the green color from squares from last game.
+    document.getElementById("s3").style.backgroundColor = "white";
+    document.getElementById("s4").style.backgroundColor = "white";
+    document.getElementById("s5").style.backgroundColor = "white";          
+    document.getElementById("s6").style.backgroundColor = "white";
+    document.getElementById("s7").style.backgroundColor = "white";
+    document.getElementById("s8").style.backgroundColor = "white";
+    document.getElementById("s9").style.backgroundColor = "white";
+
+  document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
+  currentPlayer = player_1;                    // Note the player 1 is always "X" and player 2 is always "O", but the probability
+			if (Math.random() < 0.5) {               // of a player getting the chance to move first is still randomized.
+        document.turn = "O";                   
+        currentPlayer = player_2;
+      }
+  document.winner = null;
+  setMessage(currentPlayer + " gets to start. He/She gets to play :" + document.turn);
+  showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
+    }
 }
 
 function setMessage(msg) {                                               // sets up initial greeting message
@@ -158,46 +202,4 @@ function findCurrentPlayer(name){                                       // helpe
     currentPlayer =  player_1;
   }
   return currentPlayer;
-}
-
-function resetGame(){                                                   // Resets the game; The names are requested again, the scores are
-  if(confirm("This will reset the scores to 0! Reset?")){               // reset to 0basically this function acts as the "refresh" for the
-  p1_win = 0;                                                           // game.
-  p2_win = 0;
-    player_1 = prompt("enter name for player 1", "player_1");
-  if (player_1 === "" || player_1 === null){
-    player_1 = "player_1"; 
-  }
-
-  player_2 = prompt("enter name for player 2", "player_2");
-  if (player_2 === "" || player_2 === null ){
-    player_2 = "player_2"; 
-  }
-
-  moves = 0;                                                           // setting moves to 0 in case of a new game   
-
-  for (var i = 1; i <= 9; i = i + 1) {                                 // removing symbols from boards from last game.
-    clearCell(i);
-  }
-
-    document.getElementById("s1").style.backgroundColor = "white";      // Makes the color of all the squares as white.
-    document.getElementById("s2").style.backgroundColor = "white";      // removing the green color from squares from last game.
-    document.getElementById("s3").style.backgroundColor = "white";
-    document.getElementById("s4").style.backgroundColor = "white";
-    document.getElementById("s5").style.backgroundColor = "white";          
-    document.getElementById("s6").style.backgroundColor = "white";
-    document.getElementById("s7").style.backgroundColor = "white";
-    document.getElementById("s8").style.backgroundColor = "white";
-    document.getElementById("s9").style.backgroundColor = "white";
-
-  document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
-  currentPlayer = player_1;                    // Note the player 1 is always "X" and player 2 is always "O", but the probability
-			if (Math.random() < 0.5) {               // of a player getting the chance to move first is still randomized.
-        document.turn = "O";                   
-        currentPlayer = player_2;
-      }
-  document.winner = null;
-  setMessage(currentPlayer + " gets to start. He/She gets to play :" + document.turn);
-  showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
-    }
 }
