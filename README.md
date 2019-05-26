@@ -11,7 +11,10 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 ![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac1.PNG)<br />
 ## Table of Contents
 1. [Installation](#Installation)
-#**Installation :**
+2. [Gameplay](#Gameplay)
+
+
+**Installation :**
 
 1. To play in your browser go to : https://ticotac.herokuapp.com/ OR
 2. Clone the repository.
