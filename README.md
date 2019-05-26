@@ -3,6 +3,9 @@
 
 # TicTac : Player versus Player Tic-Tac-Toe
 
+TicTac is a player versus player Tic-Tac-Toe game built using HTML, CSS and Javascript. Currently it supports local PVP games only.
+Tic-Tac-Toe is a game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+
 To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 
