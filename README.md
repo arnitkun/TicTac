@@ -9,18 +9,19 @@ Tic-Tac-Toe is a game for two players, X and O, who take turns marking the space
 To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 ![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac1.PNG)<br />
+
 ## Table of Contents
 1. [Installation](#Installation)
 2. [Gameplay](#Gameplay)
 
 
-#Installation :
+##Installation :
 
 1. To play in your browser go to : https://ticotac.herokuapp.com/ OR
 2. Clone the repository.
 3. Open the tic-tac-toe.html file from the root directory of the repository.
 
-#Gameplay :
+##Gameplay :
 
 1. The game asks for the name of both players, not putting in the name as well as deleting the preset "player_1" or "player_2"
    text names the respective players "player_1" or "player_2" repectively. Same is the case if one "cancels" the dialog box asking for        player name.
