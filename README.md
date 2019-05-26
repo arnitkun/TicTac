@@ -19,7 +19,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 ## How to install the game:
 
 1. To play in your browser go to : https://ticotac.herokuapp.com/ OR
-2. Clone the repository.
+2. Clone the repository: ```https://https://github.com/arnitkun/TicTac```
 3. Open the tic-tac-toe.html file from the root directory of the repository.
 
 ## Gameplay instructions:
