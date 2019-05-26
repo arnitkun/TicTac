@@ -1,4 +1,4 @@
-![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac1.PNG)<br />
+
 
 
 # TicTac : Player versus Player Tic-Tac-Toe
@@ -8,6 +8,7 @@ Tic-Tac-Toe is a game for two players, X and O, who take turns marking the space
 
 To See a demo of the app go to : https://ticotac.herokuapp.com/
 
+![TicTac screenshot](https://github.com/arnitkun/TicTac/blob/master/demotac1.PNG)<br />
 
 **Installation :**
 
