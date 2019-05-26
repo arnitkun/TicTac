@@ -1,15 +1,14 @@
-var tries;
+var moves;                      // number 
 var currentPlayer = "";
 var p1_win = 0;
 var p2_win = 0;
 var n_draw = 0;
-
 var player_1 = "";
 var player_2 = "";
 
 function playAgain(){
   if(confirm(" Start a new game? ")){
-  tries = 0;
+  moves = 0;
 
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
@@ -31,7 +30,9 @@ function playAgain(){
         document.turn = "O";
         currentPlayer = player_2;
       }
+
   document.winner = null;
+  
   setMessage(currentPlayer + " gets to start. \n You play : " + document.turn);
   showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
   }
@@ -52,7 +53,7 @@ function startGame() {
     player_2 = "player_2"; //add alert on not entering a name
   }
 
-  tries = 0;
+  moves = 0;
 
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
@@ -94,7 +95,7 @@ function nextMove(square) {
     setMessage(findCurrentPlayer(document.winner) + " already won the game.");
   }else if(square.innerText == ""){
     square.innerText = document.turn;
-    tries += 1;
+    moves += 1;
     switchTurn();
   }else{
     setMessage("That square is already used.");
@@ -105,7 +106,7 @@ function switchTurn() {
   
   if (checkForWinner(document.turn)) {
     document.winner = document.turn;
-  } else if( tries == 9){ 
+  } else if( moves == 9){ 
     setMessage("The game is a tie.");
     n_draw += 1;
   }else if (document.turn == "X") {
@@ -186,7 +187,7 @@ function resetGame(){
     player_2 = "player_2"; //add alert on not entering a name
   }
 
-  tries = 0;
+  moves = 0;
 
   for (var i = 1; i <= 9; i = i + 1) {
     clearCell(i);
