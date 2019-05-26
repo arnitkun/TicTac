@@ -22,3 +22,4 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 4. To play again, one of the players can press the "Play Again!" button to start a fresh new game. The scores remain until the browser is    closed, refreshed or the reset button is pressed.
 4. Once a player wins, his/her score is increased by one and the winning combination lights up in green on the board.
 5. The game will tell if a match is draw or if someone wins and, updates the scores.
+6. Clicking on a square that already has a "X" or an "O" reults in the game telling you that the square is alredy used.
