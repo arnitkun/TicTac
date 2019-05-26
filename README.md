@@ -12,17 +12,17 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Gameplay](#gameplay)
+1. [How to install the game](#how-to-install-the-game)
+2. [Gameplay instructions](#gameplay-insturctions)
 
 
-## Installation :
+## How to install the game:
 
 1. To play in your browser go to : https://ticotac.herokuapp.com/ OR
 2. Clone the repository.
 3. Open the tic-tac-toe.html file from the root directory of the repository.
 
-## Gameplay :
+## Gameplay instructions:
 
 1. The game asks for the name of both players, not putting in the name as well as deleting the preset "player_1" or "player_2"
    text names the respective players "player_1" or "player_2" repectively. Same is the case if one "cancels" the dialog box asking for        player name.
