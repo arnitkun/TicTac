@@ -12,8 +12,8 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Gameplay](#gameplay)
+1. [Installation](# installation)
+2. [Gameplay](# gameplay)
 
 
 ## Installation :
