@@ -31,7 +31,7 @@ function playAgain(){
         currentPlayer = player_2;
       }
   document.winner = null;
-  setMessage(currentPlayer + " gets to start. \n He/She gets to play :" + document.turn);
+  setMessage(currentPlayer + " gets to start. \n You play : " + document.turn);
   showScore(player_1 + " won : " + p1_win +"\n" + player_2 +" won : " + p2_win +"\n" + n_draw +" tie games.");
 
 }
