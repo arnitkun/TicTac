@@ -14,7 +14,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 
 1. [How to install the game](#how-to-install-the-game)
 2. [Game features](#Game-features)
-3. [Gameplay instructions](#Gameplay-insturctions)
+3. [Instructions for playing](#Instructions-for-playing)
 4. [Game requirements:](#Game-requirements)
 
 
@@ -32,7 +32,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 4. Option to reset the game without refreshing the page.
 5. Winning combination is highlighted.
 
-## Gameplay instructions:
+## Instructions for playing:
    For Local player versus player only:
 1. The game asks for the name of both players, not putting in the name as well as deleting the preset "player_1" or "player_2"
    text names the respective players "player_1" or "player_2" repectively. Same is the case if one "cancels" the dialog box asking for        player name.
