@@ -29,7 +29,7 @@ function playAgain(){
   document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;                    // however this code assigns player 1 as "X" and player 2 as "O". However
 			if (Math.random() < 0.5) {               // the person who should be the first to move is still randomized.
-        document.turn = "O";
+        document.turn = "O";                   //document.turn is a variable for the HTML file. It can be replaced by any other symbol.
         currentPlayer = player_2;
       }
 
