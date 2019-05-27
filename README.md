@@ -31,6 +31,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 3. Option to play again if players want to play the game again.
 4. Option to reset the game without refreshing the page.
 5. Winning combination is highlighted.
+6. Downloading the game files not necessary.
 
 ## Instructions for playing:
    For Local player versus player only:
