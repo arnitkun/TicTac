@@ -47,7 +47,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 10. A reset button exists to restart the game, allowing for new players to play. This resets the playernames and therefore the scores. On     clicking the button, the players are prompted for confirmation, clicking "yes" resets while clicking "no" cancels the reset action.
  11. The scores remain until the browser is closed, refreshed or the reset button is pressed.
  
- **12. Should the "prevent this page from creating more popups." dialog box apper with a user clicking "yes", the page would need to be  refreshed.**
+ **Should the "prevent this page from creating more popups." dialog box apper with a user clicking "yes", the page would need to be  refreshed.**
  
  ## Game requirements:
  
