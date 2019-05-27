@@ -15,7 +15,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 1. [How to install the game](#how-to-install-the-game)
 2. [Game features](#Game-features)
 3. [Instructions for playing](#Instructions-for-playing)
-4. [Game requirements:](#Game-requirements)
+4. [Game requirements](#Game-requirements)
 
 
 ## How to install the game:
