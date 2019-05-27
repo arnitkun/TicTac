@@ -15,6 +15,7 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 1. [How to install the game](#how-to-install-the-game)
 2. [Game features](#Game-features)
 3. [Gameplay instructions](#Gameplay-insturctions)
+4. [Game requirements:](#Game-requirements)
 
 
 ## How to install the game:
@@ -46,5 +47,9 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
    are prompted with a confirmation of they want to start a new game, clicking "yes" starts a new game keeping the scores and player names    unchanged while clicking "no" will cancel the initiation of a new game, returning the player to the old game.
 10. A reset button exists to restart the game, allowing for new players to play. This resets the playernames and therefore the scores. On     clicking the button, the players are prompted for confirmation, clicking "yes" resets while clicking "no" cancels the reset action.
  11. The scores remain until the browser is closed, refreshed or the reset button is pressed.
+ 
+ ## Game requirements:
+ 
+ 1. Currently the game requires only a web browser with javascript enabled. 
  
  [back to top](#table-of-contents)
