@@ -13,7 +13,8 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 ## Table of Contents
 
 1. [How to install the game](#how-to-install-the-game)
-2. [Gameplay instructions](#Gameplay-insturctions)
+2. [Features](#Current-features)
+3. [Gameplay instructions](#Gameplay-insturctions)
 
 
 ## How to install the game:
@@ -21,6 +22,14 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
 1. To play in your browser go to : https://ticotac.herokuapp.com/ OR
 2. Clone the repository: ```https://https://github.com/arnitkun/TicTac```
 3. Open the tic-tac-toe.html file from the root directory of the repository.
+
+## Game features:
+
+1. Local player versus player gameplay.
+2. Ability to maintain win count of both players as well as the number of draws, until new players join the game.
+3. Option to play again if players want to play the game again.
+4. Option to reset the game without refreshing the page.
+5. Winning combination is highlighted.
 
 ## Gameplay instructions:
    For Local player versus player only:
