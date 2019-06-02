@@ -29,7 +29,7 @@ function playAgain(){
   document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;                    // however this code assigns player 1 as "X" and player 2 as "O". However
 			if (Math.random() < 0.5) {               // the person who should be the first to move is still randomized.
-        document.turn = "O";                   //document.turn is a variable for the HTML file. It can be replaced by any other symbol.
+        document.turn = "O";                   // document.turn is a variable for the HTML file. It can be replaced by any other symbol.
         currentPlayer = player_2;
       }
 
@@ -48,9 +48,9 @@ function startGame() {                                        // This function i
   if (player_1 === "" || player_1 === null){                  // If during the prompt in which the game asks for names of players, cancelling   
     player_1 = "player_1";                                    // the dialog box as well as deleting the preset name "player_1/player_2" leads 
   }                                                           // the names being defined as "player_1" and "player_2" resplectively.                  
-                                                              
-  player_2 = prompt("enter name for player 2", "player_2");
-  if (player_2 === "" || player_2 === null ){
+                                                              // THE ONLY difference betweem this function and resetGame is that this doesn't
+  player_2 = prompt("enter name for player 2", "player_2");   // turns the boards squares as white. Reset game could be called as well for that 
+  if (player_2 === "" || player_2 === null ){                 // but I decided to keep a separate function should I add some feature later.
     player_2 = "player_2"; 
   }
 
@@ -71,10 +71,10 @@ function startGame() {                                        // This function i
 }
 
 function resetGame(){                                                   // Resets the game; The names are requested again, the scores are
-  if(confirm("This will reset the scores to 0! Reset?")){               // reset to 0basically this function acts as the "refresh" for the
+  if(confirm("This will reset the scores to 0! Reset?")){               // reset to 0 basically this function acts as the "refresh" for the
   p1_win = 0;                                                           // game.
-  p2_win = 0;
-    player_1 = prompt("enter name for player 1", "player_1");
+  p2_win = 0;                                                           // For the difference between this function and startGame, look
+    player_1 = prompt("enter name for player 1", "player_1");           // into the comments next to startGame function definition.
   if (player_1 === "" || player_1 === null){
     player_1 = "player_1"; 
   }
