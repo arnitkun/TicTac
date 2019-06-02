@@ -89,16 +89,11 @@ function resetGame(){                                                   // Reset
   for (var i = 1; i <= 9; i = i + 1) {                                 // removing symbols from boards from last game.
     clearCell(i);
   }
-
-    document.getElementById("s1").style.backgroundColor = "white";      // Makes the color of all the squares as white.
-    document.getElementById("s2").style.backgroundColor = "white";      // removing the green color from squares from last game.
-    document.getElementById("s3").style.backgroundColor = "white";
-    document.getElementById("s4").style.backgroundColor = "white";
-    document.getElementById("s5").style.backgroundColor = "white";          
-    document.getElementById("s6").style.backgroundColor = "white";
-    document.getElementById("s7").style.backgroundColor = "white";
-    document.getElementById("s8").style.backgroundColor = "white";
-    document.getElementById("s9").style.backgroundColor = "white";
+  
+  for(var n = 1; n <=9; n = n+1){
+    document.getElementById("s" + n).style.backgroundColor = "white";      // Makes the color of all the squares as white.
+  }                                                                             // removing the green color from squares from last game.
+    
 
   document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;                    // Note the player 1 is always "X" and player 2 is always "O", but the probability
