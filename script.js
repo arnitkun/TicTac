@@ -36,7 +36,7 @@ function playAgain(){
 }
 
 
-function startGame() {                                        // This function is called when the game is loaded, i.e. the webapge that
+function startGame(){                                        // This function is called when the game is loaded, i.e. the webapge that
   p1_win = 0;                                                 // contains the game is loaded in the browser.
   p2_win = 0;                                                 // It is reponsible for setting up the board, and initializing the parameters
     player_1 = prompt("enter name for player 1", "player_1"); // like scores and player names.
@@ -92,9 +92,9 @@ function resetGame(){                                                   // Reset
 
   document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;                    // Note the player 1 is always "X" and player 2 is always "O", but the probability
-			if (Math.random() < 0.5) {               // of a player getting the chance to move first is still randomized.
-        document.turn = "O";                   
-        currentPlayer = player_2;
+			if (Math.random() < 0.5) {               // of a player getting the chance to move first is still randomized. Also the game will keep
+        document.turn = "O";                   //track of player score even if they change from being player 1 to player 2 and vice versa.
+        currentPlayer = player_2;              // i.e. to get "X" one needs to put his name first. Will be changed.
       }
   document.winner = null;
   setMessage(currentPlayer + " gets to start. He/She gets to play :" + document.turn);
