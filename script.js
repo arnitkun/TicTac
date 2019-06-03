@@ -16,15 +16,10 @@ function playAgain(){
     clearCell(i);
   }
 
-    document.getElementById("s1").style.backgroundColor = "white";
-    document.getElementById("s2").style.backgroundColor = "white";
-    document.getElementById("s3").style.backgroundColor = "white";
-    document.getElementById("s4").style.backgroundColor = "white";
-    document.getElementById("s5").style.backgroundColor = "white";
-    document.getElementById("s6").style.backgroundColor = "white";
-    document.getElementById("s7").style.backgroundColor = "white";
-    document.getElementById("s8").style.backgroundColor = "white";
-    document.getElementById("s9").style.backgroundColor = "white";
+  for(var n = 1; n <=9; n = n+1){
+    document.getElementById("s" + n).style.backgroundColor = "white";      // Makes the color of all the squares as white.
+  }                                                                             // removing the green color from squares from last game.
+    
 
   document.turn = "X";                         // setting the first chance to be of random probability of 0.5 for each player
   currentPlayer = player_1;                    // however this code assigns player 1 as "X" and player 2 as "O". However
