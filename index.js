@@ -4,3 +4,10 @@ const fs = require('fs');
 
 var app = express();
 
+hbs.registerPartials(__dirname + '/views/partials'); //setting up for using handlebars partials
+app.set('view engine', 'hbs');//setting the view engine as hbs. But what is the view engine?
+app.use(express.static(__dirname + '/public')); //static content serving,using middleware
+
+app.use('/maintenance', (req, res, next) => {
+    res.render('maintenance.hbs');
+});
