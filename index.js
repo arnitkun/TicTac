@@ -11,3 +11,19 @@ app.use(express.static(__dirname + '/public')); //static content serving,using m
 app.use('/maintenance', (req, res, next) => {//serves up the maintenance page
     res.render('maintenance.hbs');
 });
+
+app.get('/about', (req, res) => {
+    res.render('about.hbs', {
+        pageTitle: 'About Page'
+    });
+});
+
+app.get('/bad', (req, res) => {
+    res.send({
+        errorMessage: "error of some kind. huh. Well actually I can't handle this request."
+    });
+});
+
+app.listen(3000, () => {
+    console.log('Listening on localhost:3000');
+});
