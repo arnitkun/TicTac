@@ -52,6 +52,12 @@ To See a demo of the app go to : https://ticotac.herokuapp.com/
  
  ## Game requirements:
  
- 1. Currently the game requires only a web browser with javascript enabled. 
+ 1. Currently the game requires only a web browser with javascript enabled.
+
+##Note:
+
+The application is under modification to use express, hence the supporting code and modules are present in the 
+repository.
+
  
  [back to top](#table-of-contents)
